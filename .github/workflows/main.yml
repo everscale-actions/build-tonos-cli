@@ -68,6 +68,7 @@ jobs:
         if: ${{ env.IS_NEW_REVISION == 'true' }}
         run: |          
           cd $GITHUB_WORKSPACE/target/release
+          ./tonos-cli --version
           tar -czvf $GITHUB_WORKSPACE/tonos-cli.tar.gz tonos-cli
           
       - name: Create Release
